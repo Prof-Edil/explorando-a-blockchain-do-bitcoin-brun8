@@ -5,3 +5,5 @@ key="xpub6Cx5tvq6nACSLJdra1A6WjqTo1SgeUZRFqsX5ysEtVBMwhCCRa4kfgFqaT2o1kwL3esB1Ps
 # descriptor=$(bitcoin-cli getdescriptorinfo "tr($key/100)" | jq)
 descriptor=$(bitcoin-cli getdescriptorinfo "tr($key/100)" | jq -r .descriptor)
 echo $(bitcoin-cli deriveaddresses $descriptor | jq -r .[0])
+
+# done
